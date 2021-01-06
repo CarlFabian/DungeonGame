@@ -1,15 +1,18 @@
 
 public class Item
 {
+   // variabler för namn och beskrivning
    private String name;
    private String desc;
-   
+
+   // Konstruktor för objektet Item.
    public Item(String name, String desc)
    {
       this.setName(name);
       this.setDesc(desc);
    }
 
+   // setters och getters
    public String getName()
    {
       return name;
@@ -30,9 +33,4 @@ public class Item
       this.desc = desc;
    }
 
-
-
-   
-   
-   
 }

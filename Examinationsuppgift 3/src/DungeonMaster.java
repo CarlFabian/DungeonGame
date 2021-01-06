@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class DungeonMaster
 {
-   //dungeon attribut
+   // dungeon attribut
    private final static int DUNGEON_SIZE = 3;
 
-   //player attribut
+   // player attribut
    private static String playerName;
    private static int playerHp = 100;
    private static int playerDmg = 10;
@@ -15,20 +15,21 @@ public class DungeonMaster
 
    public static void main(String[] args)
    {
-      //låter användaren bestämma namn på spelaren
+      // låter användaren bestämma namn på spelaren
       AsciiArt.startScreen();
       playerName = userInput.nextLine();
-      
+
       startGame();
       Dungeon.playGame();
    }
-   //Skapar en dungeon och spelare med bestämda attribut
+
+   // Skapar en dungeon och spelare med bestämda attribut
    public static void startGame()
-   { 
+   {
       new Dungeon(DUNGEON_SIZE, new Player(playerName, playerHp, playerDmg, inventory));
    }
 
-   //avslutar spelet och stänger ner programmet
+   // avslutar spelet och stänger ner programmet
    public static void endGame(Boolean win)
    {
       if (win)
